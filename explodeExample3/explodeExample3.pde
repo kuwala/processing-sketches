@@ -24,27 +24,31 @@ void setup() {
   rows = height/cellsize;            // Calculate # of rows
   MidiBus.list();
   
-  bus = new MidiBus(this, 0, 2);
+  bus = new MidiBus(this, 1, 2);
 }
 void controllerChange(int channel, int number, int value) {
   print(value); 
     switch(number) {
     case 16:
+    case 1:
       newCellSize = (int)map(value, 0, 127, 1, 40);
       break;
     case 17:
+    case 2:
     //jiggleKnib = (int)map(value, 0, 127, jiggleMin, jiggleMax) * sin(angle);
     jiggleKnobValue = value;
     angleStep = map(value, 0, 127, 0, 0.5);
      
       break;
     case 18:
+    case 3:
     //angleStep = map(value, 0, 127, 0, 0.5);
     noize = map(value, 0, 127, 0, 10);
     noizeKnobValue = value;
     
       break;
     case 19:
+    case 4:
       zoomKnobValue = (int)map(value, 0, 127, 0, width);
     
       break;
