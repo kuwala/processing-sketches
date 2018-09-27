@@ -1,5 +1,9 @@
 import themidibus.*;
+/*
 
+Listens for midi for a controller and outputs midi streams while drawing rectangles
+
+*/
 
 MidiBus myBus;
 int pitch = 64;
