@@ -64,7 +64,8 @@ PFont f;
 int fillColor = 255;
 int antiFillColor = 0;
 void setup() {
-  size(800, 400);
+  //size(800, 400);
+  fullScreen();
   frameRate(30); 
   dude = new CA();
 

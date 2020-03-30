@@ -127,5 +127,5 @@ void draw() {
   float xx = dannyNum() * 100;
   fill(color(0,0,0,40));
   float diam = 16;
-  ellipse(xx,(float)height/2,diam);  
+  ellipse(xx,(float)height/2,diam,diam);  
 }
